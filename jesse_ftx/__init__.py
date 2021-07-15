@@ -18,7 +18,7 @@ class FTX(CandleExchange):
         )
 
     def get_starting_time(self, symbol):
-        formatted_symbol = symbol.replace('USDT', 'PERP')
+        formatted_symbol = symbol.replace('-', '/')
 
         end_timestamp = jh.now()
         start_timestamp = end_timestamp - (86400_000 * 365 * 8)
@@ -54,7 +54,7 @@ class FTX(CandleExchange):
             'end_time': end_timestamp / 1000,
         }
 
-        formatted_symbol = symbol.replace('USDT', 'PERP')
+        formatted_symbol = symbol.replace('-', '/')
 
         response = requests.get(
             f'https://ftx.com/api/markets/{formatted_symbol}/candles',

@@ -1,6 +1,6 @@
-# FTX plugin for Jesse
+# FTX Spot Markets plugin for Jesse
 
-This is the initial release of the FTX driver for Jesse. At the moment, it is only meant for importing candles and running backtests. 
+This is the initial release of the FTX Spot markets driver for Jesse. At the moment, it is only meant for importing candles and running backtests. 
 
 ## Installation 
 Install by running:
@@ -33,10 +33,18 @@ import_candles_drivers = {
 }
 ```
 
-Now I should be able to run import candles from FTX:
+Now I should be able to run import candles from every _spot_ market on FTX:
 
 ```sh
-jesse import-candles 'FTX' 'BTC-USDT' '2012-06-04'
+# Traditional spot market
+jesse import-candles 'FTX' 'BTC-USD' '2020-01-01'
+# Leverage tokens:
+jesse import-candles 'FTX' 'ADABULL-USD' '2020-01-01'
+# Volatility tokens:
+jesse import-candles 'FTX' 'BVOL-USDT' '2020-01-01'
+# Stock market
+jesse import-candles 'FTX' 'TSLA-USD' '2021-01-01'
+jesse import-candles 'FTX' 'TSLA-BTC' '2021-01-01'
 ```
 
 ### Add new config values for running backtests
