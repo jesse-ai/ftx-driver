@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 VERSION = '0.1.0'
-DESCRIPTION = "FTX driver for Jesse framework"
+DESCRIPTION = "FTX driver for Jesse framework (every spot market)"
 
 REQUIRED_PACKAGES = [
     'jesse'
