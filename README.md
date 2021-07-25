@@ -54,7 +54,7 @@ We can do that by opening `config.py` and coping and pasting values from an exis
 ```py
 # https://www.ftx.com
 'FTX': {
-    'fee': 0.0004,
+    'fee': 0.0006,
 
     # backtest mode only: accepted are 'spot' and 'futures'
     'type': 'futures',
@@ -68,8 +68,10 @@ We can do that by opening `config.py` and coping and pasting values from an exis
 
     # used for spot exchange only
     'assets': [
-        {'asset': 'USDT', 'balance': 10_000},
+        {'asset': 'USD', 'balance': 10_000},
+        {'asset': 'USDT', 'balance': 1_000},
         {'asset': 'BTC', 'balance': 0},
+        {'asset': 'TSLA', 'balance': 0},
     ],
 },
 ```
