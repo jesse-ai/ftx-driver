@@ -1,6 +1,6 @@
 # FTX plugin for Jesse
 
-This is the initial release of the FTX driver for Jesse. At the moment, it is only meant for importing candles and running backtests. 
+This package is no longer required because FTX Futures are now fully integrated in Jesse. This repository will remain as an example for drivers. 
 
 ## Installation 
 Install by running:
